@@ -28,4 +28,8 @@ export class UsersService {
   updateUser(user: any): Observable<any> {
     return this.http.post<any>(this._url + 'usuarios_editar.php', user);
   }
+
+  deleteUser(id : number): Observable<any> {
+    return this.http.post<any>(this._url + 'usuarios_eliminar.php', {id: id});
+  }
 }
