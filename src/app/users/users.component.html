@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-body">
+    <h1 class="title">Administración de Usuarios</h1>
+    <button type="button" class="btn btn-primary left-align" (click)="openCreateModal()">Crear Usuario</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellido}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.rol}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm action-btn" (click)="deleteUser(user)">
+                        <i class="fas fa-trash-alt" style="color: black;"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-sm action-btn" (click)="openEditModal(user)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <app-user-form [isVisible]="isModalVisible" [isEdit]="isEdit" [user]="selectedUser" (close)="closeModal()"
+        (save)="saveUser($event)"></app-user-form>
+</div>

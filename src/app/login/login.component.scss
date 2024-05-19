@@ -1,0 +1,78 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center; /* Cambiado de 'space-evenly' a 'center' */
+  align-items: center;
+  height: 100vh;
+  background-color: #82A696;
+  gap: 10px; /* Añade un espacio pequeño entre los contenedores si es necesario */
+}
+
+.login-image {
+  width: 20%;
+  background-size: cover;
+  display: flex;
+  justify-content: center; /* Cambiado de 'right' a 'center' para centrar contenido dentro del contenedor */
+  align-items: center;
+  flex-direction: column;
+  padding-right: 5px; /* Añadir padding si es necesario para ajustar el espacio */
+}
+
+.login-card {
+  width: 20%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.logo {
+  margin-top: 30px;
+  font-size: 2.5vw;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: bolder;
+}
+
+.title{
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: #82A696;
+  margin-top: 30px;
+}
+
+.slogan {
+  font-size: 0.7vw;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.login-button, .create-user {
+  width: 80%;
+  margin-bottom: 8px;
+}
+
+.create-user{
+  width: 60%;
+  color: #82A696;
+}
+
+.login-button{
+  background-color: #82A696;
+  color: white;
+  font-weight: bolder;
+}

@@ -1,0 +1,24 @@
+<div class="login-wrapper">
+  <div class="login-image">
+    <img src="assets/logos/logo.jpg" style="width: 15vw;">
+    <h1 class="logo">TELA STOCK</h1>
+    <p class="slogan">TEJEMOS JUNTOS EL CONTROL DE TUS EXISTENCIAS</p>
+  </div>
+  <div class="login-card">
+    <h1 class="title">INICIAR SESIÓN</h1>
+    <form (ngSubmit)="onLogin()">
+      <mat-form-field appearance="outline" class="login-input">
+        <mat-label>Correo</mat-label>
+        <input matInput [(ngModel)]="user.email" name="email" placeholder="ej: hincapie">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="login-input">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [(ngModel)]="user.password" type="password" name="password" placeholder="ej: telaStock123">
+      </mat-form-field>
+  
+      <button mat-button type="submit" class="login-button"> <span style="color: white;">Ingresar</span></button>
+    </form>
+    <button mat-button class="create-user"><span style="color: #82A696;">Crear usuario</span></button>
+  </div>  
+</div>
