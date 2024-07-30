@@ -16,6 +16,8 @@ import { UsersComponent } from './users/users.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductFormComponent } from './products/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { UserFormComponent } from './user-form/user-form.component';
     LoginComponent,
     UsersComponent,
     NavBarComponent,
-    UserFormComponent
+    UserFormComponent,
+    ProductsComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,

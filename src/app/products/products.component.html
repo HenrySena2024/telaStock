@@ -1,0 +1,38 @@
+
+<app-nav-bar></app-nav-bar>
+
+<div class="container-body">
+    <h1 class="title">Administración de Productos</h1>
+    <button type="button" class="btn btn-primary left-align" (click)="openCreateModal()">Crear Productos</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Familia</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Acciones</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+             <tr *ngFor="let product of products">
+                <td>{{product.nombre}}</td>
+                <td>{{product.descripcion}}</td>
+                <td>{{product.familia}}</td>
+                <td>{{product.precio}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm action-btn" (click)="deleteProducts(product)">
+                        <i class="fas fa-trash-alt" style="color: black;"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-sm action-btn" (click)="openEditModal(product)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </td>
+            </tr> 
+        </tbody>
+    </table>
+    <app-product-form [isVisible]="isModalVisible" [isEdit]="isEdit" [product]="selectedProduct" (close)="closeModal()"
+    (save)="saveProduct($event)"></app-product-form>
+    
+</div>

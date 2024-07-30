@@ -1,0 +1,39 @@
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isVisible}" style="display: block;" *ngIf="isVisible">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEdit ? 'Editar Producto' : 'Crear Producto' }}</h5>
+          <button type="button" class="close-btn" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" [(ngModel)]="product.nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="descripcion">descripcion</label>
+              <input type="text" class="form-control" id="descripcion" [(ngModel)]="product.descripcion" name="descripcion" required>
+            </div>
+            <div class="form-group">
+              <label for="precio">precio</label>
+              <input type="text" class="form-control" id="precio" [(ngModel)]="product.precio" name="precio" required>
+            </div>
+           
+            <div class="form-group">
+              <label for="categoria_id">categoria</label>
+              <select class="form-control" id="categoria_id" [(ngModel)]="product.categoria_id" name="categoria_id">
+                <option value=7>Perchado</option>
+              </select>
+            </div>
+            <div class="button-container">
+              <button type="submit" class="btn btn-primary" style="background-color: #82A696; border: none;">{{ isEdit ? 'Guardar Cambios' : 'Crear Producto' }}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
